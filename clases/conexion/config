@@ -1,9 +1,0 @@
-{
-    "conexion":{
-        "server": "localhost",
-        "user": "agustin",
-        "password": "Ireliagod1!",
-        "database": "integra",
-        "port": "3306";
-    }
-}

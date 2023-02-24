@@ -1,5 +1,6 @@
 <?php
 
-    require_once "clases/conexion/conecion.php"
+    require "conexion.php";
 
+    
 ?>
