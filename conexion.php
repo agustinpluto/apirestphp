@@ -1,12 +1,9 @@
 <?php
 
     function establecer_conexion() {
-        $conn = mysqli_connect("localhost", "agustin", "Ireliagod1!", "apirest");
-        echo "Conexión establecida";
+        $conexion = mysqli_connect("localhost", "agustin", "Ireliagod1!", "apirest");
+        return $conexion;
       }
-      
-      establecer_conexion();
-
       
       $sql = "SELECT * FROM usuarios";
       $resultado = mysqli_query(establecer_conexion(), $consulta);
