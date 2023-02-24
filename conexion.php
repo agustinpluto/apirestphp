@@ -5,15 +5,24 @@
         echo "Conexión establecida";
       }
       
-      $consulta = mysqli_prepare($conexion, "SELECT * FROM usuarios");
-      mysqli_stmt_bind_param($consulta, "s", $valor_a_buscar);
-      mysqli_stmt_execute($consulta);
-      $resultado = mysqli_stmt_get_result($consulta);
-      while ($fila = mysqli_fetch_assoc($resultado)) {
-        echo $fila["nombre_de_campo"];
-      }
-      mysqli_close($conexion);
-      
       establecer_conexion();
+
+      if (!$conexion) {
+        die("Error de conexión: " . mysqli_connect_error());
+      }
+      
+      $sql = "SELECT * FROM usuarios";
+      $resultado = mysqli_query(establecer_conexion(), $consulta);
+      $registros = array();
+
+      while ($fila = mysqli_fetch_assoc($resultado)) {
+        $registros[] = $fila;
+      }
+      
+      $json = json_encode($registros);
+      echo $json;
+      mysqli_close($conexion);
+
+      
 
 ?>
