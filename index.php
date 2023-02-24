@@ -1,1 +1,5 @@
-hola
+<?php
+
+    require_once "clases/conexion/conecion.php"
+
+?>
