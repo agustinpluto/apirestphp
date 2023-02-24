@@ -1,7 +1,7 @@
 <?php
 
     function establecer_conexion() {
-        $conn = mysqli_connect("127.0.0.1", "agustin", "Ireliagod1!", "apirest");
+        $conn = mysqli_connect("127.0.0.1:3306", "agustin", "Ireliagod1!", "apirest");
         echo "Conexión establecida";
       }
       
